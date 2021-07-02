@@ -11,6 +11,7 @@
 * Juno (GTK Theme);
 * Reversal (Icons);
 * GIT;
+* NVM - NodeJS manager;
 
 ## How to Install
 1. Clone this repository;

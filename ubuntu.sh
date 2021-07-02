@@ -8,6 +8,11 @@ printf "\nVisual Studio Code...\n"
 wget -O $HOME/Downloads/vscode.deb 'https://update.code.visualstudio.com/latest/linux-deb-x64/stable'
 sudo dpkg -i $HOME/Downloads/vscode.deb
 
+printf "\nNVM - NodeJS..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 printf "\nSpotify...\n"
 sudo apt -qq install curl -y
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
