@@ -15,16 +15,15 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 printf "\nSpotify...\n"
 sudo apt -qq install curl -y
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt -qq install spotify-client -y
 
 printf "\nDocker...\n"
 sudo apt -qq install \
     ca-certificates \
-    curl \
     gnupg \
-    lsb-release
+    lsb-release -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 sudo apt -qq update
 sudo apt -qq install docker-ce docker-ce-cli containerd.io
