@@ -17,7 +17,7 @@ printf "\nSpotify...\n"
 sudo apt -qq install curl -y
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt -qq install spotify-client -y
+sudo apt -qq update && sudo apt -qq install spotify-client -y
 
 printf "\nDocker...\n"
 sudo apt -qq install ca-certificates gnupg lsb-release -y
