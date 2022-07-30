@@ -36,6 +36,10 @@ printf "\nDocker Compose...\n"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+printf "\nInsomnia...\n"
+echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+sudo apt -qq update && sudo apt -qq install insomnia -y
+
 printf "\nStyles...\n"
 sudo apt -qq install gnome-tweaks git gnome-shell-extensions -y
 git clone https://github.com/yeyushengfan258/Reversal-icon-theme.git $HOME/Downloads/reversal-icon
