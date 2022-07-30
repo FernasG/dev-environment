@@ -6,7 +6,7 @@ sudo apt -qq install curl ca-certificates gnupg lsb-release gnome-tweaks git gno
 # NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 # Visual Studio Code
-wget --quiet -O $HOME/Downloads/vscode.deb 'https://update.code.visualstudio.com/latest/linux-deb-x64/stable'
+wget --quiet -O $HOME/Downloads/vscode.deb "https://update.code.visualstudio.com/latest/linux-deb-x64/stable"
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo gpg --dearmour -o /usr/share/keyrings/spotify.gpg 
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/spotify.gpg] http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -36,6 +36,6 @@ sudo apt -qq install spotify-client beekeeper-studio docker-ce docker-ce-cli con
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 
 printf "\nSetting Gnome Themes...\n"
-gsettings set org.gnome.desktop.interface icon-theme 'Reversal'
-gsettings set org.gnome.desktop.interface gtk-theme 'Juno'
-gsettings set org.gnome.desktop.wm.preferences theme 'Juno'
+gsettings set org.gnome.desktop.interface icon-theme "Reversal"
+gsettings set org.gnome.desktop.interface gtk-theme "Juno"
+gsettings set org.gnome.desktop.wm.preferences theme "Juno"

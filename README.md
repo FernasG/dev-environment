@@ -5,13 +5,15 @@
 ~~This bash script only works on Ubuntu.~~
 
 ## Packages
-* Visual Studio Code;
-* Spotify;
+* Beekeeper Studio;
+* Docker and Docker Compose;
 * Gnome Tweaks;
+* Insomnia;
 * Juno (GTK Theme);
+* NVM - NodeJS Manager;
 * Reversal (Icons);
-* GIT;
-* NVM - NodeJS manager;
+* Spotify;
+* Visual Studio Code;
 
 ## How to Install
 1. Clone this repository;
